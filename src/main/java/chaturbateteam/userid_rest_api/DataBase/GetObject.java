@@ -1,14 +1,13 @@
 package chaturbateteam.userid_rest_api.DataBase;
 
-import com.example.idcardchecker.Classes.ID_CARD;
-import com.example.idcardchecker.Classes.User;
+import chaturbateteam.userid_rest_api.Classes.*;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.Objects;
 
-import static com.example.idcardchecker.DataBase.GetArray.getDataFromIDCardTable;
-import static com.example.idcardchecker.DataBase.GetArray.getDataFromUserTable;
+import static chaturbateteam.userid_rest_api.DataBase.GetArray.getDataFromIDCardTable;
+import static chaturbateteam.userid_rest_api.DataBase.GetArray.getDataFromUserTable;
 
 
 public class GetObject
@@ -76,7 +75,7 @@ public class GetObject
         ArrayList<User> users = getDataFromUserTable();
         for (User user : users)
         {
-            if(Objects.equals(getID_CARDByUserid(user.getId()).getId_num(), idcardnumber))
+            if(Objects.equals(Objects.requireNonNull(getID_CARDByUserid(user.getId())).getId_num(), idcardnumber))
             {
                 return user.getName();
             }

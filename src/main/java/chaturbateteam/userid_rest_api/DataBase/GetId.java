@@ -1,12 +1,12 @@
 package chaturbateteam.userid_rest_api.DataBase;
 
 
-import com.example.idcardchecker.Classes.User;
+import chaturbateteam.userid_rest_api.Classes.User;
 
 import java.util.ArrayList;
 import java.util.Objects;
 
-import static com.example.idcardchecker.DataBase.GetArray.getDataFromUserTable;
+import static chaturbateteam.userid_rest_api.DataBase.GetArray.getDataFromUserTable;
 
 public class GetId
 {

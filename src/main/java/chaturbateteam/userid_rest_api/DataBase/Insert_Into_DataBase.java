@@ -1,10 +1,8 @@
 package chaturbateteam.userid_rest_api.DataBase;
 
 
-import com.example.idcardchecker.Classes.ID_CARD;
-import com.example.idcardchecker.Classes.User;
-import com.example.idcardchecker.Enums.Nationality;
-import com.example.idcardchecker.Enums.Sex;
+import chaturbateteam.userid_rest_api.Classes.*;
+import chaturbateteam.userid_rest_api.Enums.*;
 import org.jetbrains.annotations.NotNull;
 
 import java.sql.*;
@@ -14,7 +12,7 @@ public class Insert_Into_DataBase
 {
     public Insert_Into_DataBase()
     {
-        new LoadMySQL();
+        //new LoadMySQL();
     }
     public void insertIntoUserTable(@NotNull User user) throws SQLException, ClassNotFoundException {
         String Uname = user.getName();

@@ -1,9 +1,8 @@
 package chaturbateteam.userid_rest_api.DataBase;
 
-import com.example.idcardchecker.Classes.ID_CARD;
-import com.example.idcardchecker.Classes.User;
-import com.example.idcardchecker.Enums.Nationality;
-import com.example.idcardchecker.Enums.Sex;
+
+import chaturbateteam.userid_rest_api.Classes.*;
+import chaturbateteam.userid_rest_api.Enums.*;
 import org.jetbrains.annotations.NotNull;
 
 import java.sql.*;
@@ -21,7 +20,7 @@ public class GetArray
 
     public GetArray()
     {
-        new LoadMySQL();
+        //new LoadMySQL();
         Create_DataBase_With_Tables create = new Create_DataBase_With_Tables();
         try
         {
@@ -29,7 +28,7 @@ public class GetArray
             Connection con = DriverManager.getConnection(dbAddress + dbName, userName, password);
             try
             {
-                new LoadMySQL();
+                //new LoadMySQL();
                 create.createUsersTable();
                 create.createIDCardTable();
             }

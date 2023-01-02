@@ -2,8 +2,7 @@ package chaturbateteam.userid_rest_api.DataBase;
 
 
 
-import com.example.idcardchecker.Classes.ID_CARD;
-import com.example.idcardchecker.Classes.User;
+import chaturbateteam.userid_rest_api.Classes.*;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
