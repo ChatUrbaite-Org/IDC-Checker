@@ -56,6 +56,7 @@ public class User
 
     public Date getBirthdate() {
         return birthDate;
+
     }
     public void setBirthdate(Date birthdate) {
         this.birthDate = birthdate;
