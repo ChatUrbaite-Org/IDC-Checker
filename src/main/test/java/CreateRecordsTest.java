@@ -1,3 +1,4 @@
+package src.main.test.java;
 
 import chaturbateteam.userid_rest_api.Classes.*;
 import chaturbateteam.userid_rest_api.DataBase.*;
