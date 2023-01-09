@@ -24,12 +24,13 @@ public class DeleteController implements DeleteService
         }
 
     }
+    @POST
     @Path("/user")
     @Override
-    public Response deleteUser(@HeaderParam("Userid") int userid)
+    public Response deleteUser(@HeaderParam("Userid") String userid)
     {
         try{
-            DeleteData.deleteUser(userid);
+            DeleteData.deleteUser(Integer.parseInt(userid));
             return Response.ok().build();
         }catch (Exception e)
         {
@@ -40,10 +41,10 @@ public class DeleteController implements DeleteService
     @Path("/IDCard")
     @Override
     @POST
-    public Response deleteIDCard(@HeaderParam("IDCardid") int IDCardid)
+    public Response deleteIDCard(@HeaderParam("IDCardid") String IDCardid)
     {
         try{
-            DeleteData.deleteIDCard(IDCardid);
+            DeleteData.deleteIDCard(Integer.parseInt(IDCardid));
             return Response.ok().build();
         }catch (Exception e)
         {

@@ -10,9 +10,9 @@ public interface DeleteService
     Response deleteUser(@HeaderParam("userName") String userName,
                         @HeaderParam("token") String token);
     //Path("/user")
-    Response deleteUser(@HeaderParam("Userid") int userid);
+    Response deleteUser(@HeaderParam("Userid") String userid);
 
     //Path("/IDCard")
-    Response deleteIDCard(@HeaderParam("IDCardid") int IDCardid);
+    Response deleteIDCard(@HeaderParam("IDCardid") String IDCardid);
 
 }

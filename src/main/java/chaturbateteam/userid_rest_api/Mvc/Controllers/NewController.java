@@ -52,9 +52,9 @@ public class NewController implements NewService
                 object.put("Email",email);
                 object.put("Token",token);
                 object.put("BirthPlace",birthPlace);
-                object.put("Birth Date",birthDate);
-                object.put("SEX",sex);
-                object.put("MoM",isMom);
+                object.put("BirthDate",birthDate);
+                object.put("Sex",sex);
+                object.put("Mom",isMom);
                 object.put("GirlName",girlName);
                 object.put("Nationality",nationality);
                 object.put("Message",ex.getMessage());
@@ -73,13 +73,13 @@ public class NewController implements NewService
     @Path("/IDCard")
     @Override
     @POST
-    public Response createNewIDCard(@HeaderParam("can_number") String can_number,
-                                    @HeaderParam("userid") String userid,
-                                    @HeaderParam("organname") String orgname,
-                                    @HeaderParam("idNum") String idNum,
-                                    @HeaderParam("fingerPrint") String fingerPrint,
-                                    @HeaderParam("expiry") String Expiry,
-                                    @HeaderParam("nationality") String nation)
+    public Response createNewIDCard(@HeaderParam("Can_number") String can_number,
+                                    @HeaderParam("Userid") String userid,
+                                    @HeaderParam("OrganName") String orgname,
+                                    @HeaderParam("IdNum") String idNum,
+                                    @HeaderParam("FingerPrint") String fingerPrint,
+                                    @HeaderParam("Expiry") String Expiry,
+                                    @HeaderParam("Nationality") String nation)
     {
         try
         {
