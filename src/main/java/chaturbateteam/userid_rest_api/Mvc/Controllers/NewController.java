@@ -88,7 +88,7 @@ public class NewController implements NewService
         }
         catch (Exception ex)
         {
-            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).type(MediaType.APPLICATION_JSON).build();
+            return Response.status(Response.Status.BAD_REQUEST).type(MediaType.APPLICATION_JSON).build();
         }
 
     }

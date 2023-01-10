@@ -91,7 +91,13 @@ public class GetController implements GetService
     @Path("/users")
     public Response getUsers()
     {
-        return Response.ok(getJSONUsers().toString()).type(MediaType.APPLICATION_JSON).build();
+        try{
+            return Response.ok(getJSONUsers().toString()).type(MediaType.APPLICATION_JSON).build();
+        }catch (Exception e)
+        {
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).type(MediaType.APPLICATION_JSON).build();
+        }
+
     }
 
     @Override
@@ -100,7 +106,12 @@ public class GetController implements GetService
     @Path("/idcards")
     public Response getIdCards()
     {
-        return Response.ok(getJSONIDCards().toString()).type(MediaType.APPLICATION_JSON).build();
+        try{
+            return Response.ok(getJSONIDCards().toString()).type(MediaType.APPLICATION_JSON).build();
+        }catch (Exception ex)
+        {
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).type(MediaType.APPLICATION_JSON).build();
+        }
     }
     @Override
     @GET
@@ -108,6 +119,11 @@ public class GetController implements GetService
     @Path("/userbyidc")
     public String getUserbyIdCard(@HeaderParam("idcardnumber") String idcardnumber)
     {
-        return GetObject.getUserbyIdCard(idcardnumber);
+        try{
+            return GetObject.getUserbyIdCard(idcardnumber);
+        }catch (Exception ex)
+        {
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).type(MediaType.APPLICATION_JSON).build().toString();
+        }
     }
 }
